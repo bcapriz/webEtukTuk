@@ -1,0 +1,516 @@
+* {
+    color: #E8F5E9;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Nova Mono", monospace;
+    font-style: normal;
+    font-weight: 400;
+    font-optical-sizing: auto;
+    background-color: #142323;
+    box-sizing: content-box;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    /* Scroll bar width */
+}
+
+::-webkit-scrollbar-track {
+    background: #85c44b;
+    /* Scroll bar background color  */
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(49, 174, 211, 255);
+    /* Slider Button Color */
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+/* Styles for Header*/
+header {
+    display: flex;
+    padding-left: 2%;
+    width: 97%;
+    position: fixed;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid #E8F5E9;
+    border-width: 2px;
+    background-color: rgba(20, 35, 35);
+    z-index: 1;
+    padding: 1%;
+    margin-left: 10px;
+}
+
+.opacity {
+    background-color: rgba(20, 35, 35, 0.8);
+}
+
+/* Change link color and font size on mouseover */
+.container-ImgTitulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 30%;
+}
+
+/* Hide the h1 next to it */
+.visually-hidden {
+    position: absolute;
+    left: -9999px;
+}
+
+/* Logo Size */
+.img-header {
+    height: 10%;
+    width: 10%;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, .8))
+}
+
+/* Styles in nav-links within the Header */
+.container-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9%;
+    padding-right: 10%;
+}
+
+.listLink {
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+    color: #E8F5E9;
+    white-space: nowrap;
+    font-size: 1.9vh;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+}
+
+.link:hover {
+    /* Change color and animation of link padding on mouseover */
+    color: #85c44b;
+    transform: translateY(-1px);
+    padding: 1px;
+}
+
+/* Styles on the home screen, where the main title and an image to the right are located */
+.container-main-aside {
+    display: flex;
+    box-sizing: content-box;
+    height: 70%;
+    padding-left: 4%;
+    padding-top: 0.5%;
+}
+
+.container-titleMain {
+    padding: 3%;
+    width: 50%;
+    margin-top: 1.2%;
+    text-align: center;
+}
+
+.titleMain {
+    font-size: 400%;
+    width: 81%;
+    text-align: left;
+    margin-bottom: 3.4%;
+
+}
+
+.text-Main {
+    color: #E8F5E9;
+    font-size: 135%;
+    width: 80%;
+    text-align: justify;
+    line-height: 3.5vh;
+}
+
+.text-Main a {
+    font-weight: 900;
+    text-decoration: none;
+}
+
+/* Styles for the button inside the container-main-aside */
+.button-main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 20%;
+    padding-top: 2%;
+}
+
+/* General style for buttons */
+.button {
+    text-align: center;
+    background: linear-gradient(to right, rgba(133, 196, 75, 255), rgba(49, 174, 211, 255));
+    height: 5vh;
+    width: 150%;
+    border-radius: 20px;
+    border-color: rgba(133, 196, 75, 255);
+    margin-top: 30px;
+    font-size: 2vh;
+    font-weight: 700;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    transform: translateY(-5px);
+}
+
+.button a {
+    text-decoration: none;
+}
+
+.button:active {
+    background: linear-gradient(to right, rgba(49, 174, 211, 255), rgba(133, 196, 75, 255));
+}
+
+.button a {
+    font-size: 2vh;
+}
+
+/* Styles for the container-main-aside image container */
+.container-aside-img {
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    margin-top: 4.5%;
+    width: 50%;
+}
+
+
+/* Styles for the image to rotate on itself, performing the animation */
+.img-aside {
+    animation: img-aside 15s linear infinite;
+    filter: drop-shadow(0 0 25px rgba(0, 0, 0, .8))
+}
+ 
+/* Animation configuration so that it works */
+@keyframes img-aside {
+    from {
+        transform: rotate(0deg);
+        /* Start the rotation at 0 degrees */
+    }
+
+    to {
+        transform: rotate(360deg);
+        /* Finish the rotation at 360 degrees */
+    }
+}
+
+.div-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
+}
+
+
+.container-section {
+    padding: 5%;
+}
+
+
+.container-section-articles-topics {
+    display: flex;
+    justify-content: stretch;
+    box-sizing: content-box;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 0;
+}
+
+.container-section-win-token {
+    align-items: center;
+    margin-top: 0 !important;
+}
+
+.container-article-topics {
+    width: 60%;
+    align-items: center;
+}
+
+.container-article-win-token {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+    height: 55vh
+}
+
+.container-article-win-token div h4 {
+    display: flex;
+    color: rgba(49, 174, 211, 255);
+    padding-left: 2%;
+    font-size: 2.5vh;
+    margin-bottom: 2%;
+}
+
+.titles {
+    font-size: 5vh;
+}
+
+.title-win-token {
+    display: flex;
+    justify-content: center;
+    color: #85c44b;
+    margin-bottom: 3%;
+}
+
+.container-video {
+    margin-bottom: 10%;
+    padding-left: 23%;
+    padding-top: 20%;
+}
+
+.container-article-topics .text-Main {
+    width: 65%;
+    height: 100%;
+}
+
+.container-article-win-token .text-Main {
+    width: 75%;
+}
+
+.container-aside-img {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    box-sizing: content-box;
+}
+
+.img-powering {
+    padding-top: 6%;
+    width: 65%;
+    margin-left: 10%;
+}
+
+.container-section-articles-game {
+    display: flex;
+    justify-content: stretch;
+    padding-left: 8%;
+    padding-top: 7%;
+}
+
+.container-article-game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.container-article-game a {
+    width: 20%;
+    padding-left: 25%;
+}
+
+.container-article-img-game {
+    padding-left: 17%;
+    padding-top: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.div-title-phases {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+
+.titles-phases {
+    margin-bottom: 7%;
+    margin-left: 5%;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, .8))
+}
+
+.titles-secondary {
+    font-size: 3.5vh;
+    filter: none;
+}
+
+.container-article-phases {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+    align-items: stretch;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+.div-phases {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24vh;
+    width: 30vh;
+    background: linear-gradient(to right, rgba(54, 174, 211, 255), rgba(133, 196, 75, 255));
+    border-radius: 5%;
+}
+
+.list-phases {
+    display: none;
+    opacity: 0;
+    transition: opacity 3.3s ease, max-height 3.3s ease;
+    overflow: hidden;
+}
+
+.show {
+    display: block;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    width: 25vh;
+    font-size: 2vh;
+    padding-left: 8%;
+    line-height: 3vh;
+    text-align: justify;
+    opacity: 1;
+}
+
+
+.container-article-questions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 3%;
+    border-radius: 2vh;
+    padding: 0.5%;
+}
+
+.article-questions {
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+    justify-content: space-between;
+    border-bottom: 2px solid #142323;
+    border-width: 2px;
+    background: linear-gradient(to right, rgba(49, 174, 211, 255), rgba(133, 196, 75, 255));
+    border-radius: 2vh;
+}
+
+.svg-question {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+path {
+    filter: drop-shadow(0 0 50px rgba(0, 0, 0.8))
+}
+
+.div-text-questions {
+    margin-top: 0.5%;
+    box-sizing: border-box;
+    padding: 1.5vh;
+    background: linear-gradient(to right, rgba(133, 196, 75, 255), rgba(49, 174, 211, 255));
+    border-radius: 1vh;
+}
+
+.div-text-questions a {
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.text-questions {
+    color: #E8F5E9;
+    font-size: 130%;
+    width: 100%;
+    text-align: justify;
+    line-height: 3.5vh;
+    text-align: justify;
+}
+
+svg {
+    display: flex;
+    width: 2vh;
+    align-items: center;
+    color: #142323;
+}
+
+/*Estilos para el footer*/
+footer {
+    height: 100%;
+    background-color: rgba(20, 100, 120, 0.09);
+    margin-bottom: 1%;
+    border-top: 2px solid #E8F5E9;
+    border-width: 2px;
+}
+
+.container-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+}
+
+.container-info-footer {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1.5%;
+}
+
+.div-info-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.div-info-footer h4 {
+    margin-left: 17%;
+    font-size: 2.3vh;
+    font-weight: 500;
+    margin-bottom: 8%;
+    white-space: nowrap;
+}
+
+.container-links-footer {
+    gap: 1.3vh
+}
+
+.div-img-footer {
+    display: flex;
+    justify-content: flex-end;
+    justify-items: center;
+    align-items: center;
+    margin-top: 1%;
+    margin-right: 5%;
+    width: 100%;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, .8))
+}
+
+.container-links-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-final-footer {
+    padding-left: 12%;
+    padding-right: 12%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 1%;
+}
